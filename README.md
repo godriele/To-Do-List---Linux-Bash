@@ -1,4 +1,4 @@
-Bash To-Do List Manager
+# Bash To-Do List Manager
 
 A simple, command-line to-do list manager written in Bash. This script allows users to add, view, and remove tasks saved in a local todo.txt file. It’s lightweight, easy to use, and great for learning and practicing Bash scripting skills.
 
