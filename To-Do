@@ -42,7 +42,7 @@ add_task
 # Step 3: List All Task
 
  # Read all the task from the file and display them with numbering 
- #
+
   list_task() {
 	echo "Your To-Do List:"
 
@@ -58,6 +58,19 @@ list_task
 
 # ---------------------------------------------------------------------------------
 # Step 4: Remove a Task
+
+ # Delete the task by the number of it
+ 
+ delete_task() {
+	echo "Enter the number of the task you would like to delete"
+	
+
+}
+
+
+
+
+
 # ---------------------------------------------------------------------------------
 # Step 5: Clear All Task
 # ---------------------------------------------------------------------------------
