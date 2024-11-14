@@ -6,7 +6,7 @@
 # 	- The file wehre tasks will be stored
 # 	- Create the file if it doesnt exist
 
-#	- Add a new tast
+#	- Add a new task
 #	- List all tasks
 #	- Remove a specif task by number
 #	- Clear all tasks
@@ -17,7 +17,7 @@
 
 # The task will be stored in here
 
-TODO_FILE = "todo.txt"
+TODO_FILE="todo.txt"
 
 if [[ ! -f $TODO_FILE ]]; then
 	touch "$TODO_FILE"
@@ -36,8 +36,26 @@ fi
 	echo "Task Added!"
 
   }
+
+add_task
 # ---------------------------------------------------------------------------------
-# Step 3: List All Task 
+# Step 3: List All Task
+
+ # Read all the task from the file and display them with numbering 
+ #
+  list_task() {
+	echo "Your To-Do List:"
+
+	if [ ! -s $TODO_FILE ];  then
+		echo "Task list is empty"
+	else	
+		 cat -n $TODO_FILE
+	fi 
+
+}
+
+list_task
+
 # ---------------------------------------------------------------------------------
 # Step 4: Remove a Task
 # ---------------------------------------------------------------------------------
