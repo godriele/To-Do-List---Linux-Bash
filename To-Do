@@ -55,24 +55,32 @@ fi
 }
 
 # list_task
-
 # ---------------------------------------------------------------------------------
 # Step 4: Remove a Task
 
  # Delete the task by the number of it
- 
  delete_task() {
-	echo "Enter the number of the task you would like to delete"
-	
 
+   list_task
+
+	 if [ ! -s $TODO_FILE ]; then
+		 echo "Error: Task List Empty!:"
+	 else
+		 echo "Enter the number of the task you would like to delete"
+		 read -r task_num
+		 
+		 # I just dont know who to grab the number that its associated with it
+		 # when listing the task
+
+		 # sed basially is used to process and manipulate text in files
+		 # use sed like -i ${task_num}d  $TODO_FILE
+	 fi
+		 
 }
-
-
 # ---------------------------------------------------------------------------------
 # Step 5: Clear All Task
 
  # Clear all the tasks
- 
  clear_all_task() {
  	if [ ! -s $TODO_FILE ]; then
 	 	echo "Error: Cant clear the task list because it's empty"
@@ -83,7 +91,6 @@ fi
 }
 
 # clear_all_task
-
 # ---------------------------------------------------------------------------------
 # Step 6: Menu
 
@@ -108,8 +115,4 @@ while true; do
 		*) echo "Invalid Option"
 	esac
 done
-
-
-
-
 # ---------------------------------------------------------------------------------
