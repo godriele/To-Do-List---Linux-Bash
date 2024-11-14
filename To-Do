@@ -37,7 +37,7 @@ fi
 
   }
 
-add_task
+# add_task
 # ---------------------------------------------------------------------------------
 # Step 3: List All Task
 
@@ -54,7 +54,7 @@ add_task
 
 }
 
-list_task
+# list_task
 
 # ---------------------------------------------------------------------------------
 # Step 4: Remove a Task
@@ -82,8 +82,34 @@ list_task
  	fi
 }
 
-
+# clear_all_task
 
 # ---------------------------------------------------------------------------------
 # Step 6: Menu
+
+while true; do
+	echo -e "\n--- To-Do List Manager --------"
+	echo "1. Add Task"
+	echo "2. List Task"
+	echo "3. Remove Task"
+	echo "4. Clear All Task"
+	echo "5. Exit"
+	echo " ------------------------------"
+	echo "Choose an option"
+
+	read -r choice
+
+	case $choice in
+		1) add_task ;;
+		2) list_task ;;
+		3) delete_task ;;
+		4) clear_all_task;;
+		5) echo "Goodbye"; exit 0;;
+		*) echo "Invalid Option"
+	esac
+done
+
+
+
+
 # ---------------------------------------------------------------------------------
