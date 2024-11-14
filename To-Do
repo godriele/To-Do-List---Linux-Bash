@@ -68,11 +68,22 @@ list_task
 }
 
 
-
-
-
 # ---------------------------------------------------------------------------------
 # Step 5: Clear All Task
+
+ # Clear all the tasks
+ 
+ clear_all_task() {
+ 	if [ ! -s $TODO_FILE ]; then
+	 	echo "Error: Cant clear the task list because it's empty"
+ 	else 
+	 	truncate -s 0 $TODO_FILE
+	 	echo "Cleared all tasks!"
+ 	fi
+}
+
+
+
 # ---------------------------------------------------------------------------------
 # Step 6: Menu
 # ---------------------------------------------------------------------------------
