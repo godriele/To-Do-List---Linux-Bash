@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Welcom to my To-Do-List script. Ive sectioned this script into different parts
+# The parts are:
+
+# 	- The file wehre tasks will be stored
+# 	- Create the file if it doesnt exist
+
+#	- Add a new tast
+#	- List all tasks
+#	- Remove a specif task by number
+#	- Clear all tasks
+#	- Main Menu Loop
+
+# ---------------------------------------------------------------------------------
+# Step 1: Define the Storage Files and Functions
+
+# The task will be stored in here
+
+TODO_FILE = "todo.txt"
+
+if [[ ! -f $TODO_FILE ]]; then
+	touch "$TODO_FILE"
+	echo "Created the To-Do txt"
+fi
+
+# ---------------------------------------------------------------------------------
+# Step 2: Add a New Task
+#
+#
+#
+# ---------------------------------------------------------------------------------
+# Step 3: List All Task 
+# ---------------------------------------------------------------------------------
+# Step 4: Remove a Task
+# ---------------------------------------------------------------------------------
+# Step 5: Clear All Task
+# ---------------------------------------------------------------------------------
+# Step 6: Menu
+# ---------------------------------------------------------------------------------
